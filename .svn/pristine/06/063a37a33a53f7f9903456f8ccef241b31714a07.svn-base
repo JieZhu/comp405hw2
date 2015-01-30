@@ -1,0 +1,35 @@
+package jz52.view;
+
+/**
+ * the view-to-model adaptor in MVC model
+ * @author jz52@rice.edu	
+ *
+ */
+public interface IView2ModelAdaptor {
+
+	/**
+	 * let the model start the game	
+	 */
+	void startGame();
+
+	/**
+	 * control the model to exit the game
+	 */
+	void exitGame();
+
+	/**
+	 * make model to pause the game
+	 */
+	void pauseGame();
+
+	/**
+	 * resume the game in the model	
+	 */
+	void resumeGame();
+
+	/**
+	 * restart the game in the model
+	 */
+	void restartGame();
+
+}

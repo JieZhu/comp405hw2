@@ -1,0 +1,5 @@
+package jz52.model;
+
+public interface IModel2ViewAdaptor {
+
+}

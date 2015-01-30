@@ -1,0 +1,46 @@
+package jz52.model;
+
+/**
+ * play state.
+ * throw UnsupportedOperationException when the operation is not supported.
+ * @author jz52@rice.edu
+ */
+public class PlayState implements IGameState {
+
+	@Override
+	public void start(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		game.setState(new PauseMenuState(this));
+	}
+
+	@Override
+	public void resume(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void restart(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void fail(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public String toString() {
+		return "Play State";
+	}
+	
+
+}

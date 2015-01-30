@@ -1,0 +1,48 @@
+package jz52.model;
+
+public class Game {
+	
+	private IGameState _state;
+
+	public Game() {
+		super();
+		this._state = MainMenuState.Singleton;
+	}
+	
+	public void start() {
+		_state.start(this);
+	}
+	
+	public void exit() {
+		_state.exit(this);
+	}
+
+	public void pause() {
+		_state.pause(this);
+	}
+	
+	public void resume() {
+		_state.resume(this);
+	}
+	
+	public void restart() {
+		_state.restart(this);
+	}
+	
+	@Override
+	public String toString() {
+		return _state.toString();
+	}
+	
+	
+
+	
+	IGameState getState() {
+		return _state;
+	}
+
+	void setState(IGameState _state) {
+		this._state = _state;
+	}
+
+}

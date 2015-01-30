@@ -1,0 +1,49 @@
+package jz52.model;
+
+import jz52.model.Game;
+
+/**
+ * Game state interface can start the game, exit the game, pause the game, resume the game, restart the game and 
+ * fail the game.
+ * throw UnsupportedOperationException when the operation is not supported.
+ * @author jz52@rice.edu	
+ */
+public interface IGameState {
+
+	/**
+	 * start the game.
+	 * @param game --- the context game
+	 */
+	void start(Game game);
+
+	/**
+	 * exit the game.
+	 * @param game --- the context game	
+	 */
+	void exit(Game game);
+
+	/**
+	 * pause the game.
+	 * @param game --- the context game
+	 */
+	void pause(Game game);
+
+	/**
+	 * resume the game when the game is paused
+	 * @param game --- the context game	
+	 */
+	void resume(Game game);
+
+	/**
+	 * restart the game when failed or exited
+	 * @param game --- the context game	
+	 */
+	void restart(Game game);
+	
+	/**
+	 * fail the game
+	 * @param game --- the context game
+	 */
+	void fail(Game game);
+
+}

@@ -1,0 +1,61 @@
+package jz52.model;
+
+/**
+ * Pause Menu State. 
+ * throw UnsupportedOperationException when the operation is not supported.
+ * @author jz52@rice.edu	
+ *
+ */
+public class PauseMenuState implements IGameState {
+	
+	/**
+	 * previous state before pausing the game
+	 */
+	private IGameState _pre;
+	
+	/**
+	 * constructor: give the previous state as a parameter.
+	 * @param _pre
+	 */
+	public PauseMenuState(IGameState _pre) {
+		this._pre = _pre;
+	}
+
+	@Override
+	public void start(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		game.setState(_pre);
+	}
+
+	@Override
+	public void restart(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String toString() {
+		return "Pause Menu State";
+	}
+	
+	
+
+}

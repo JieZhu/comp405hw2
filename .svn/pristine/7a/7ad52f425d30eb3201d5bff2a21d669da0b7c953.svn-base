@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_7qPh4KEKEeS_pLvh38JH2g" name="HW01">
+    <eAnnotations xmi:id="_79miwKEKEeS_pLvh38JH2g" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_79vssKEKEeS_pLvh38JH2g" source="codegen">
+        <details xmi:id="_79vssaEKEeS_pLvh38JH2g" key="codegenDirectory" value="/HW01/src"/>
+        <details xmi:id="_9P-woKEKEeS_pLvh38JH2g" key="AssociatedSourceCode" value="/HW01/src/jz52/controller/Controller.java;4266585252/1;/HW01/src/jz52/model/Game.java;1231947858/1;/HW01/src/jz52/model/GameOverMenuState.java;2146171486/1;/HW01/src/jz52/model/IGameState.java;3267436255/1;/HW01/src/jz52/model/IModel2ViewAdaptor.java;2023985516/1;/HW01/src/jz52/model/MainMenuState.java;3003392974/1;/HW01/src/jz52/model/Model.java;2321095082/1;/HW01/src/jz52/model/PauseMenuState.java;3842582826/1;/HW01/src/jz52/model/PlayState.java;2789619343/1;/HW01/src/jz52/model/VictoryState.java;2931340227/1;/HW01/src/jz52/view/IView2ModelAdaptor.java;1143265090/1;/HW01/src/jz52/view/MainView.java;4226445324/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_8rLacKEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_8rLacaEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMBgKEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMBgaEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMBgqEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMBg6EKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMokKEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_8rMokaEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_8rNPoKEKEeS_pLvh38JH2g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8mqG0KEKEeS_pLvh38JH2g" name="jz52">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8mw0gKEKEeS_pLvh38JH2g" name="model">
+        <packagedElement xmi:type="uml:Class" xmi:id="_8raD8KEKEeS_pLvh38JH2g" name="Game">
+          <ownedComment xmi:id="_81w50KEKEeS_pLvh38JH2g">
+            <body>simulated-game class. The game can be started, exit, 
+paused, resumed and restarted.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_80ypcKEKEeS_pLvh38JH2g" name="_state" visibility="private" type="_8sBvAKEKEeS_pLvh38JH2g" association="_82G4EKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81VcA6EKEeS_pLvh38JH2g" name="Game" specification="_8rb5IKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81VcBKEKEeS_pLvh38JH2g" type="_8raD8KEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>super();
+		this._state = MainMenuState.Singleton;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WDEKEKEeS_pLvh38JH2g" name="start" specification="_8rdHQKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.start(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WDEaEKEeS_pLvh38JH2g" name="exit" specification="_8rdHQaEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.exit(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WDEqEKEeS_pLvh38JH2g" name="pause" specification="_8rduUKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.pause(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WDE6EKEeS_pLvh38JH2g" name="resume" specification="_8rduUaEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.resume(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WqIKEKEeS_pLvh38JH2g" name="restart" specification="_8reVYKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.restart(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WqIaEKEeS_pLvh38JH2g" name="win" specification="_8reVYaEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_state.win(this);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81WqIqEKEeS_pLvh38JH2g" name="toString" specification="_8re8cKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81WqI6EKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return _state.toString();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81XRMKEKEeS_pLvh38JH2g" name="getState" specification="_8rotcKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81XRMaEKEeS_pLvh38JH2g" type="_8sBvAKEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>return _state;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81XRMqEKEeS_pLvh38JH2g" name="setState" specification="_8y7oQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81XRM6EKEeS_pLvh38JH2g" name="_state" type="_8sBvAKEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>this._state = _state;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8rb5IKEKEeS_pLvh38JH2g" name="Game" method="_81VcA6EKEeS_pLvh38JH2g">
+            <eAnnotations xmi:id="_8rcgMKEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_8rcgMaEKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedComment xmi:id="_81w50aEKEeS_pLvh38JH2g">
+              <body>Constructor: instantiate the game state with the Main menu state.</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8rcgMqEKEeS_pLvh38JH2g" type="_8raD8KEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rdHQKEKEeS_pLvh38JH2g" name="start" method="_81WDEKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w50qEKEeS_pLvh38JH2g">
+              <body>start the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rdHQaEKEeS_pLvh38JH2g" name="exit" method="_81WDEaEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w506EKEeS_pLvh38JH2g">
+              <body>exit the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rduUKEKEeS_pLvh38JH2g" name="pause" method="_81WDEqEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w51KEKEeS_pLvh38JH2g">
+              <body>pause the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rduUaEKEeS_pLvh38JH2g" name="resume" method="_81WDE6EKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w51aEKEeS_pLvh38JH2g">
+              <body>resume the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8reVYKEKEeS_pLvh38JH2g" name="restart" method="_81WqIKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w51qEKEeS_pLvh38JH2g">
+              <body>restart the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8reVYaEKEeS_pLvh38JH2g" name="win" method="_81WqIaEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81w516EKEeS_pLvh38JH2g">
+              <body>win the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8re8cKEKEeS_pLvh38JH2g" name="toString" method="_81WqIqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8rfjgKEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rotcKEKEeS_pLvh38JH2g" name="getState" visibility="package" method="_81XRMKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81xg4KEKEeS_pLvh38JH2g">
+              <body>protected methods for changing and getting the state.</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8y5MAKEKEeS_pLvh38JH2g" type="_8sBvAKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8y7oQKEKEeS_pLvh38JH2g" name="setState" visibility="package" method="_81XRMqEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81xg4aEKEeS_pLvh38JH2g">
+              <body>set the state of the game
+	 * @param _state --- new state to be set</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8y7oQaEKEeS_pLvh38JH2g" name="_state" type="_8sBvAKEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8rx3YKEKEeS_pLvh38JH2g" name="GameOverMenuState">
+          <ownedComment xmi:id="_81xg4qEKEeS_pLvh38JH2g">
+            <body>Game Over Menu State implementing IGameState.
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_8zBH0KEKEeS_pLvh38JH2g" client="_8rx3YKEKEeS_pLvh38JH2g" supplier="_8sBvAKEKEeS_pLvh38JH2g" contract="_8sBvAKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81X4QKEKEeS_pLvh38JH2g" name="start" specification="_8zBu4KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81X4QaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81YfUKEKEeS_pLvh38JH2g" name="exit" specification="_8zDkEaEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81YfUaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81ZGYKEKEeS_pLvh38JH2g" name="pause" specification="_8zFZQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81ZGYaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81ZtcKEKEeS_pLvh38JH2g" name="resume" specification="_8zGnYqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81ZtcaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81aUgKEKEeS_pLvh38JH2g" name="restart" specification="_8zIckKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81aUgaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PlayState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81aUgqEKEeS_pLvh38JH2g" name="fail" specification="_8zKRwKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81aUg6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81aUhKEKEeS_pLvh38JH2g" name="toString" specification="_8r1hwKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81aUhaEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Game Over Menu State&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81a7kKEKEeS_pLvh38JH2g" name="win" specification="_8zMG8qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81a7kaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8r1hwKEKEeS_pLvh38JH2g" name="toString" method="_81aUhKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8r2I0KEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zBu4KEKEeS_pLvh38JH2g" name="start" method="_81X4QKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zCV8KEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zDkEaEKEeS_pLvh38JH2g" name="exit" method="_81YfUKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zDkEqEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zFZQKEKEeS_pLvh38JH2g" name="pause" method="_81ZGYKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zFZQaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zGnYqEKEeS_pLvh38JH2g" name="resume" method="_81ZtcKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zGnY6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zIckKEKEeS_pLvh38JH2g" name="restart" method="_81aUgKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zIckaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zKRwKEKEeS_pLvh38JH2g" name="fail" method="_81aUgqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zKRwaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zMG8qEKEeS_pLvh38JH2g" name="win" method="_81a7kKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zMuAKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_8sBvAKEKEeS_pLvh38JH2g" name="IGameState">
+          <ownedComment xmi:id="_81xg46EKEeS_pLvh38JH2g">
+            <body>Game state interface can start the game, exit the game, pause the game, resume the game, restart the game and 
+fail the game.
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_8zOjMKEKEeS_pLvh38JH2g" name="start">
+            <ownedParameter xmi:id="_8zOjMaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zPKQKEKEeS_pLvh38JH2g" name="exit">
+            <ownedParameter xmi:id="_8zPKQaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zPxUKEKEeS_pLvh38JH2g" name="pause">
+            <ownedParameter xmi:id="_8zPxUaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zQYYKEKEeS_pLvh38JH2g" name="resume">
+            <ownedParameter xmi:id="_8zQ_cKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zQ_caEKEeS_pLvh38JH2g" name="restart">
+            <ownedParameter xmi:id="_8zRmgKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zRmgaEKEeS_pLvh38JH2g" name="win">
+            <ownedParameter xmi:id="_8zRmgqEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zSNkKEKEeS_pLvh38JH2g" name="fail">
+            <ownedParameter xmi:id="_8zSNkaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_8sPKYKEKEeS_pLvh38JH2g" name="IModel2ViewAdaptor">
+          <ownedComment xmi:id="_81yH8KEKEeS_pLvh38JH2g">
+            <body>model-to-view adaptor in MVC model
+@author jz52@rice.edu
+ *</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_8sQYgKEKEeS_pLvh38JH2g" name="update">
+            <ownedParameter xmi:id="_8sRmoKEKEeS_pLvh38JH2g" name="string">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8sSNsKEKEeS_pLvh38JH2g" name="MainMenuState">
+          <ownedComment xmi:id="_81yH8aEKEeS_pLvh38JH2g">
+            <body>Main menu state is the state when first entering the game.
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu	
+ *</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_80z3kKEKEeS_pLvh38JH2g" name="Singleton" isStatic="true" type="_8sSNsKEKEeS_pLvh38JH2g" association="_82IGMKEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_800eoKEKEeS_pLvh38JH2g" value="new MainMenuState()"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_8zS0oKEKEeS_pLvh38JH2g" client="_8sSNsKEKEeS_pLvh38JH2g" supplier="_8sBvAKEKEeS_pLvh38JH2g" contract="_8sBvAKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81bioKEKEeS_pLvh38JH2g" name="start" specification="_8zTbsKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81bioaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PlayState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81bioqEKEeS_pLvh38JH2g" name="exit" specification="_8zVQ4qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81bio6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new GameOverMenuState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81cJsKEKEeS_pLvh38JH2g" name="pause" specification="_8zXGEqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81cJsaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81cJsqEKEeS_pLvh38JH2g" name="resume" specification="_8zY7QaEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81cJs6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81cwwKEKEeS_pLvh38JH2g" name="restart" specification="_8zawcKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81cwwaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81cwwqEKEeS_pLvh38JH2g" name="fail" specification="_8zb-kKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81cww6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81dX0KEKEeS_pLvh38JH2g" name="toString" specification="_8sdM0KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81dX0aEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Main Menu State&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81d-4KEKEeS_pLvh38JH2g" name="win" specification="_8zfB4qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81d-4aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8sWfIKEKEeS_pLvh38JH2g" name="MainMenuState">
+            <eAnnotations xmi:id="_8sWfIaEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_8sXGMKEKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_8sawkKEKEeS_pLvh38JH2g" type="_8sSNsKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8sdM0KEKEeS_pLvh38JH2g" name="toString" method="_81dX0KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8sdz4KEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zTbsKEKEeS_pLvh38JH2g" name="start" method="_81bioKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zTbsaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zVQ4qEKEeS_pLvh38JH2g" name="exit" method="_81bioqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zVQ46EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zXGEqEKEeS_pLvh38JH2g" name="pause" method="_81cJsKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zXtIKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zY7QaEKEeS_pLvh38JH2g" name="resume" method="_81cJsqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zY7QqEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zawcKEKEeS_pLvh38JH2g" name="restart" method="_81cwwKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zawcaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zb-kKEKEeS_pLvh38JH2g" name="fail" method="_81cwwqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zb-kaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zfB4qEKEeS_pLvh38JH2g" name="win" method="_81d-4KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zfo8KEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8sr2UKEKEeS_pLvh38JH2g" name="Model">
+          <ownedComment xmi:id="_81yH8qEKEeS_pLvh38JH2g">
+            <body>the model class of the system. Model can start game, exit
+game, pause game, resume game and restart game, in addition to
+let the view to update the display text.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_802T0KEKEeS_pLvh38JH2g" name="_view" visibility="private" type="_8sPKYKEKEeS_pLvh38JH2g" association="_82ItQaEKEeS_pLvh38JH2g"/>
+          <ownedAttribute xmi:id="_80264aEKEeS_pLvh38JH2g" name="game" visibility="private" type="_8raD8KEKEeS_pLvh38JH2g" association="_82J7YKEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_803h8KEKEeS_pLvh38JH2g" value="new Game()"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81el8KEKEeS_pLvh38JH2g" name="Model" specification="_8zjTUKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81el8aEKEeS_pLvh38JH2g" name="_view" type="_8sPKYKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_81el8qEKEeS_pLvh38JH2g" type="_8sr2UKEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>this._view = _view;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81fNAKEKEeS_pLvh38JH2g" name="startGame" specification="_8sx88aEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.start();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81fNAaEKEeS_pLvh38JH2g" name="exitGame" specification="_8sykAKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.exit();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81fNAqEKEeS_pLvh38JH2g" name="pauseGame" specification="_8sykAaEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.pause();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81f0EKEKEeS_pLvh38JH2g" name="resumeGame" specification="_8szLEKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.resume();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81f0EaEKEeS_pLvh38JH2g" name="restartGame" specification="_8szLEaEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.restart();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81f0EqEKEeS_pLvh38JH2g" name="winGame" specification="_8szyIKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>game.win();
+		updateState();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81gbIKEKEeS_pLvh38JH2g" name="updateState" specification="_8s0ZMKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>_view.update(game.toString());
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8sxV4KEKEeS_pLvh38JH2g" name="start"/>
+          <ownedOperation xmi:id="_8sx88aEKEeS_pLvh38JH2g" name="startGame" method="_81fNAKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvAaEKEeS_pLvh38JH2g">
+              <body>start the game.</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8sykAKEKEeS_pLvh38JH2g" name="exitGame" method="_81fNAaEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvAqEKEeS_pLvh38JH2g">
+              <body>exit the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8sykAaEKEeS_pLvh38JH2g" name="pauseGame" method="_81fNAqEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvA6EKEeS_pLvh38JH2g">
+              <body>pause the game when playing</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8szLEKEKEeS_pLvh38JH2g" name="resumeGame" method="_81f0EKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvBKEKEeS_pLvh38JH2g">
+              <body>resume the game from pause game menu</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8szLEaEKEeS_pLvh38JH2g" name="restartGame" method="_81f0EaEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvBaEKEeS_pLvh38JH2g">
+              <body>restart the game from game over menu</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8szyIKEKEeS_pLvh38JH2g" name="winGame" method="_81f0EqEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81yvBqEKEeS_pLvh38JH2g">
+              <body>win the game when playing game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8s0ZMKEKEeS_pLvh38JH2g" name="updateState" method="_81gbIKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81zWEKEKEeS_pLvh38JH2g">
+              <body>uodate the display label in view</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zjTUKEKEeS_pLvh38JH2g" name="Model" method="_81el8KEKEeS_pLvh38JH2g">
+            <eAnnotations xmi:id="_8zj6YKEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_8zj6YaEKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedComment xmi:id="_81yvAKEKEeS_pLvh38JH2g">
+              <body>constructor of Model. take a model-to-view adaptor as 
+	 * an input parameter.
+	 * @param _view	--- model-to-view adaptor.</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8zjTUaEKEeS_pLvh38JH2g" name="_view" type="_8sPKYKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_8zj6YqEKEeS_pLvh38JH2g" type="_8sr2UKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8s4DkKEKEeS_pLvh38JH2g" name="PauseMenuState">
+          <ownedComment xmi:id="_81zWEaEKEeS_pLvh38JH2g">
+            <body>Pause Menu State. 
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu	
+ *</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_804wEKEKEeS_pLvh38JH2g" name="_pre" visibility="private" type="_8sBvAKEKEeS_pLvh38JH2g" association="_82LwkaEKEeS_pLvh38JH2g"/>
+          <interfaceRealization xmi:id="_8zlIgKEKEeS_pLvh38JH2g" client="_8s4DkKEKEeS_pLvh38JH2g" supplier="_8sBvAKEKEeS_pLvh38JH2g" contract="_8sBvAKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81hCMKEKEeS_pLvh38JH2g" name="PauseMenuState" specification="_8zmWoKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81hCMaEKEeS_pLvh38JH2g" name="_pre" type="_8sBvAKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_81hCMqEKEeS_pLvh38JH2g" type="_8s4DkKEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>this._pre = _pre;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81hCM6EKEeS_pLvh38JH2g" name="start" specification="_8znkwKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81hCNKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81hpQKEKEeS_pLvh38JH2g" name="exit" specification="_8zpZ8KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81hpQaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new GameOverMenuState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81hpQqEKEeS_pLvh38JH2g" name="pause" specification="_8zqoEqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81hpQ6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81iQUKEKEeS_pLvh38JH2g" name="resume" specification="_8zr2MqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81iQUaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(_pre);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81i3YKEKEeS_pLvh38JH2g" name="restart" specification="_8ztEUqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81i3YaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PlayState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81jecKEKEeS_pLvh38JH2g" name="fail" specification="_8zu5gaEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81jecaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81kskKEKEeS_pLvh38JH2g" name="toString" specification="_8s8VAKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81kskaEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Pause Menu State&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81l6sKEKEeS_pLvh38JH2g" name="win" specification="_8zwHoqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81l6saEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8s8VAKEKEeS_pLvh38JH2g" name="toString" method="_81kskKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8s88EKEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zmWoKEKEeS_pLvh38JH2g" name="PauseMenuState" method="_81hCMKEKEeS_pLvh38JH2g">
+            <eAnnotations xmi:id="_8zm9sKEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_8zm9saEKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedComment xmi:id="_81zWEqEKEeS_pLvh38JH2g">
+              <body>constructor: give the previous state as a parameter.
+	 * @param _pre</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8zmWoaEKEeS_pLvh38JH2g" name="_pre" type="_8sBvAKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_8zm9sqEKEeS_pLvh38JH2g" type="_8s4DkKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8znkwKEKEeS_pLvh38JH2g" name="start" method="_81hCM6EKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8znkwaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zpZ8KEKEeS_pLvh38JH2g" name="exit" method="_81hpQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zpZ8aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zqoEqEKEeS_pLvh38JH2g" name="pause" method="_81hpQqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zqoE6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zr2MqEKEeS_pLvh38JH2g" name="resume" method="_81iQUKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zsdQKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8ztEUqEKEeS_pLvh38JH2g" name="restart" method="_81i3YKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8ztrYKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zu5gaEKEeS_pLvh38JH2g" name="fail" method="_81jecKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zu5gqEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zwHoqEKEeS_pLvh38JH2g" name="win" method="_81l6sKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zwHo6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8tLlkKEKEeS_pLvh38JH2g" name="PlayState">
+          <ownedComment xmi:id="_81zWE6EKEeS_pLvh38JH2g">
+            <body>play state.
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_8zyj4KEKEeS_pLvh38JH2g" client="_8tLlkKEKEeS_pLvh38JH2g" supplier="_8sBvAKEKEeS_pLvh38JH2g" contract="_8sBvAKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81mhwKEKEeS_pLvh38JH2g" name="start" specification="_8zzK8KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81mhwaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81nI0KEKEeS_pLvh38JH2g" name="exit" specification="_8z1nMKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81nI0aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new GameOverMenuState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81nv4KEKEeS_pLvh38JH2g" name="pause" specification="_8z3cYKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81nv4aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PauseMenuState(this));
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81nv4qEKEeS_pLvh38JH2g" name="resume" specification="_8z4qgqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81nv46EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81nv5KEKEeS_pLvh38JH2g" name="restart" specification="_8z6fsKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81nv5aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PlayState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81oW8KEKEeS_pLvh38JH2g" name="fail" specification="_8z8U4aEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81oW8aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new GameOverMenuState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81oW8qEKEeS_pLvh38JH2g" name="win" specification="_8z9jAqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81oW86EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new VictoryState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81o-AKEKEeS_pLvh38JH2g" name="toString" specification="_8tOB0KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81o-AaEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Play State&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8tOB0KEKEeS_pLvh38JH2g" name="toString" method="_81o-AKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8tOo4KEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8zzK8KEKEeS_pLvh38JH2g" name="start" method="_81mhwKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8zzK8aEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z1nMKEKEeS_pLvh38JH2g" name="exit" method="_81nI0KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z1nMaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z3cYKEKEeS_pLvh38JH2g" name="pause" method="_81nv4KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z3cYaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z4qgqEKEeS_pLvh38JH2g" name="resume" method="_81nv4qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z4qg6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z6fsKEKEeS_pLvh38JH2g" name="restart" method="_81nv5KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z6fsaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z8U4aEKEeS_pLvh38JH2g" name="fail" method="_81oW8KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z8U4qEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z9jAqEKEeS_pLvh38JH2g" name="win" method="_81oW8qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z-KEKEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8tV9oKEKEeS_pLvh38JH2g" name="VictoryState">
+          <ownedComment xmi:id="_81z9IKEKEeS_pLvh38JH2g">
+            <body>victory State.
+throw UnsupportedOperationException when the operation is not supported.
+@author jz52@rice.edu
+ *</body>
+          </ownedComment>
+          <interfaceRealization xmi:id="_8z_YMKEKEeS_pLvh38JH2g" client="_8tV9oKEKEeS_pLvh38JH2g" supplier="_8sBvAKEKEeS_pLvh38JH2g" contract="_8sBvAKEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81qzMKEKEeS_pLvh38JH2g" name="start" specification="_8z__QKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81qzMaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81raQKEKEeS_pLvh38JH2g" name="exit" specification="_80B0cKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81raQaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new GameOverMenuState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81raQqEKEeS_pLvh38JH2g" name="pause" specification="_80DCkKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81raQ6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81raRKEKEeS_pLvh38JH2g" name="resume" specification="_80EQsaEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81raRaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81sBUKEKEeS_pLvh38JH2g" name="restart" specification="_80GF4qEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81sBUaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>game.setState(new PlayState());
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81sBUqEKEeS_pLvh38JH2g" name="win" specification="_80H7EqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81sBU6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81soYKEKEeS_pLvh38JH2g" name="fail" specification="_80JwQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81soYaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+            <language>java</language>
+            <body>throw new UnsupportedOperationException();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81soYqEKEeS_pLvh38JH2g" name="toString" specification="_8tZA8KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81soY6EKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;Victory State&quot;;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8tZA8KEKEeS_pLvh38JH2g" name="toString" method="_81soYqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8tZoAKEKEeS_pLvh38JH2g" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8z__QKEKEeS_pLvh38JH2g" name="start" method="_81qzMKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_8z__QaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80B0cKEKEeS_pLvh38JH2g" name="exit" method="_81raQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80B0caEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80DCkKEKEeS_pLvh38JH2g" name="pause" method="_81raQqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80DCkaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80EQsaEKEeS_pLvh38JH2g" name="resume" method="_81raRKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80EQsqEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80GF4qEKEeS_pLvh38JH2g" name="restart" method="_81sBUKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80GF46EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80H7EqEKEeS_pLvh38JH2g" name="win" method="_81sBUqEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80H7E6EKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80JwQKEKEeS_pLvh38JH2g" name="fail" method="_81soYKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_80JwQaEKEeS_pLvh38JH2g" name="game" type="_8raD8KEKEeS_pLvh38JH2g"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82G4EKEKEeS_pLvh38JH2g" name="" memberEnd="_82G4EaEKEeS_pLvh38JH2g _80ypcKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82G4EaEKEeS_pLvh38JH2g" name="" type="_8raD8KEKEeS_pLvh38JH2g" association="_82G4EKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82IGMKEKEeS_pLvh38JH2g" name="" memberEnd="_82IGMaEKEeS_pLvh38JH2g _80z3kKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82IGMaEKEeS_pLvh38JH2g" name="" type="_8sSNsKEKEeS_pLvh38JH2g" association="_82IGMKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82ItQaEKEeS_pLvh38JH2g" name="" memberEnd="_82ItQqEKEeS_pLvh38JH2g _802T0KEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82ItQqEKEeS_pLvh38JH2g" name="" type="_8sr2UKEKEeS_pLvh38JH2g" association="_82ItQaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82J7YKEKEeS_pLvh38JH2g" name="" memberEnd="_82J7YaEKEeS_pLvh38JH2g _80264aEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82J7YaEKEeS_pLvh38JH2g" name="" type="_8sr2UKEKEeS_pLvh38JH2g" association="_82J7YKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82LwkaEKEeS_pLvh38JH2g" name="" memberEnd="_82LwkqEKEeS_pLvh38JH2g _804wEKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82LwkqEKEeS_pLvh38JH2g" name="" type="_8s4DkKEKEeS_pLvh38JH2g" association="_82LwkaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8mxbkKEKEeS_pLvh38JH2g" name="view">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_8tg8wKEKEeS_pLvh38JH2g" name="IView2ModelAdaptor">
+          <ownedComment xmi:id="_81z9IaEKEeS_pLvh38JH2g">
+            <body>the view-to-model adaptor in MVC model
+@author jz52@rice.edu	
+ *</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_8tix8KEKEeS_pLvh38JH2g" name="startGame" visibility="package">
+            <ownedComment xmi:id="_81z9IqEKEeS_pLvh38JH2g">
+              <body>let the model start the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tkAEKEKEeS_pLvh38JH2g" name="exitGame">
+            <ownedComment xmi:id="_81z9I6EKEeS_pLvh38JH2g">
+              <body>control the model to exit the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tknIKEKEeS_pLvh38JH2g" name="pauseGame" visibility="package">
+            <ownedComment xmi:id="_810kMKEKEeS_pLvh38JH2g">
+              <body>make model to pause the game</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tknIaEKEeS_pLvh38JH2g" name="resumeGame" visibility="package">
+            <ownedComment xmi:id="_810kMaEKEeS_pLvh38JH2g">
+              <body>resume the game in the model</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tlOMKEKEeS_pLvh38JH2g" name="restartGame" visibility="package">
+            <ownedComment xmi:id="_810kMqEKEeS_pLvh38JH2g">
+              <body>restart the game in the model</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tl1QKEKEeS_pLvh38JH2g" name="winGame">
+            <ownedComment xmi:id="_810kM6EKEeS_pLvh38JH2g">
+              <body>win the game</body>
+            </ownedComment>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8tnDYKEKEeS_pLvh38JH2g" name="MainView">
+          <ownedComment xmi:id="_810kNKEKEeS_pLvh38JH2g">
+            <body>main view in the MVC model in the system.
+@author jz52@rice.edu
+ *</body>
+          </ownedComment>
+          <generalization xmi:id="_80pfgKEKEeS_pLvh38JH2g" general="_80NaoaEKEeS_pLvh38JH2g"/>
+          <ownedAttribute xmi:id="_807MUKEKEeS_pLvh38JH2g" name="serialVersionUID" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_807zYKEKEeS_pLvh38JH2g" value="8168764013326581332L"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_807zYaEKEeS_pLvh38JH2g" name="_model" visibility="private" type="_8tg8wKEKEeS_pLvh38JH2g" association="_82M-saEKEeS_pLvh38JH2g"/>
+          <ownedAttribute xmi:id="_809BgKEKEeS_pLvh38JH2g" name="contentPane" visibility="private" type="_80OowaEKEeS_pLvh38JH2g" association="_82NlwaEKEeS_pLvh38JH2g"/>
+          <ownedAttribute xmi:id="_809okKEKEeS_pLvh38JH2g" name="panel" visibility="private" isLeaf="true" type="_80OowaEKEeS_pLvh38JH2g" isReadOnly="true" association="_82Oz4aEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_809okaEKEeS_pLvh38JH2g" value="new JPanel()"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_80-PoaEKEeS_pLvh38JH2g" name="btnStart" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82QCAaEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_80-PoqEKEeS_pLvh38JH2g" value="new JButton(&quot;Start&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_80-2saEKEeS_pLvh38JH2g" name="btnExit" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82QpEaEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_80-2sqEKEeS_pLvh38JH2g" value="new JButton(&quot;Exit&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_80_dwaEKEeS_pLvh38JH2g" name="btnPause" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82R3MKEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81AE0KEKEeS_pLvh38JH2g" value="new JButton(&quot;Pause&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_81Ar4KEKEeS_pLvh38JH2g" name="lblGreeting" visibility="private" isLeaf="true" type="_80ThQKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82SeQaEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81Ar4aEKEeS_pLvh38JH2g" value="new JLabel(&quot;Main Menu State&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_81BS8KEKEeS_pLvh38JH2g" name="btnResume" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82TFUaEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81BS8aEKEeS_pLvh38JH2g" value="new JButton(&quot;Resume&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_81B6AaEKEeS_pLvh38JH2g" name="btnRestart" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82UTcKEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81B6AqEKEeS_pLvh38JH2g" value="new JButton(&quot;Restart&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_81ChEaEKEeS_pLvh38JH2g" name="btnWin" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82U6gaEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81DIIKEKEeS_pLvh38JH2g" value="new JButton(&quot;Win&quot;)"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_81DIIqEKEeS_pLvh38JH2g" name="btnFail" visibility="private" isLeaf="true" type="_80RsEKEKEeS_pLvh38JH2g" isReadOnly="true" association="_82WIoKEKEeS_pLvh38JH2g">
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_81DvMKEKEeS_pLvh38JH2g" value="new JButton(&quot;Fail&quot;)"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81t2gKEKEeS_pLvh38JH2g" name="MainView" specification="_80a2AKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81t2gaEKEeS_pLvh38JH2g" name="model" type="_8tg8wKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_81t2gqEKEeS_pLvh38JH2g" type="_8tnDYKEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>this._model = model;
+		initGUI();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81t2g6EKEeS_pLvh38JH2g" name="start" specification="_8tr74KEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>setVisible(true);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81t2hKEKEeS_pLvh38JH2g" name="initGUI" specification="_8tsi8KEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 665, 332);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		contentPane.add(panel, BorderLayout.SOUTH);
+		btnStart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnStart.setEnabled(false);
+				btnPause.setEnabled(true);
+				btnRestart.setEnabled(true);
+				btnWin.setEnabled(true);
+				btnFail.setEnabled(true);
+				_model.startGame();
+			}
+		});
+		
+		panel.add(btnStart);
+		btnPause.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnPause.setEnabled(false);
+				btnResume.setEnabled(true);
+				btnWin.setEnabled(false);
+				btnFail.setEnabled(false);
+				_model.pauseGame();
+			}
+		});
+		btnPause.setEnabled(false);
+		
+		panel.add(btnPause);
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnPause.setEnabled(false);
+				btnExit.setEnabled(false);
+				btnWin.setEnabled(false);
+				btnFail.setEnabled(false);
+				_model.exitGame();
+			}
+		});
+		btnResume.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnResume.setEnabled(false);
+				btnPause.setEnabled(true);
+				btnWin.setEnabled(true);
+				btnFail.setEnabled(true);
+				_model.resumeGame();
+			}
+		});
+		btnResume.setEnabled(false);
+		
+		panel.add(btnResume);
+		btnWin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnWin.setEnabled(false);
+				btnFail.setEnabled(false);
+				btnPause.setEnabled(false);
+				_model.winGame();
+			}
+		});
+		btnWin.setEnabled(false);
+		
+		panel.add(btnWin);
+		btnFail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnPause.setEnabled(false);
+				btnExit.setEnabled(false);
+				btnWin.setEnabled(false);
+				btnFail.setEnabled(false);
+				_model.exitGame();
+			}
+		});
+		btnFail.setEnabled(false);
+		
+		panel.add(btnFail);
+		
+		panel.add(btnExit);
+		btnRestart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnExit.setEnabled(true);
+				btnPause.setEnabled(true);
+				btnWin.setEnabled(true);
+				btnFail.setEnabled(true);
+				_model.restartGame();
+			}
+		});
+		btnRestart.setEnabled(false);
+		
+		panel.add(btnRestart);
+		lblGreeting.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		contentPane.add(lblGreeting, BorderLayout.CENTER);
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81udkKEKEeS_pLvh38JH2g" name="updateDispaly" specification="_8tvmQKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81udkaEKEeS_pLvh38JH2g" name="game">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>lblGreeting.setText(game);
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8tr74KEKEeS_pLvh38JH2g" name="start" method="_81t2g6EKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_811LQaEKEeS_pLvh38JH2g">
+              <body>start main view</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tsi8KEKEeS_pLvh38JH2g" name="initGUI" visibility="private" method="_81t2hKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_811LQqEKEeS_pLvh38JH2g">
+              <body>init GUI</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8tvmQKEKEeS_pLvh38JH2g" name="updateDispaly" method="_81udkKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_811LQ6EKEeS_pLvh38JH2g">
+              <body>update the game state label to display
+	 * @param game ---text to show the game state</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8tvmQaEKEeS_pLvh38JH2g" name="game">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_80a2AKEKEeS_pLvh38JH2g" name="MainView" method="_81t2gKEKEeS_pLvh38JH2g">
+            <eAnnotations xmi:id="_80a2AqEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_80a2A6EKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedComment xmi:id="_811LQKEKEeS_pLvh38JH2g">
+              <body>Create the frame.</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_80a2AaEKEeS_pLvh38JH2g" name="model" type="_8tg8wKEKEeS_pLvh38JH2g"/>
+            <ownedParameter xmi:id="_80bdEKEKEeS_pLvh38JH2g" type="_8tnDYKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82M-saEKEeS_pLvh38JH2g" name="" memberEnd="_82M-sqEKEeS_pLvh38JH2g _807zYaEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82M-sqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82M-saEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82NlwaEKEeS_pLvh38JH2g" name="" memberEnd="_82NlwqEKEeS_pLvh38JH2g _809BgKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82NlwqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82NlwaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82Oz4aEKEeS_pLvh38JH2g" name="" memberEnd="_82Oz4qEKEeS_pLvh38JH2g _809okKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82Oz4qEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82Oz4aEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82QCAaEKEeS_pLvh38JH2g" name="" memberEnd="_82QCAqEKEeS_pLvh38JH2g _80-PoaEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82QCAqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82QCAaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82QpEaEKEeS_pLvh38JH2g" name="" memberEnd="_82QpEqEKEeS_pLvh38JH2g _80-2saEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82QpEqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82QpEaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82R3MKEKEeS_pLvh38JH2g" name="" memberEnd="_82R3MaEKEeS_pLvh38JH2g _80_dwaEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82R3MaEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82R3MKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82SeQaEKEeS_pLvh38JH2g" name="" memberEnd="_82SeQqEKEeS_pLvh38JH2g _81Ar4KEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82SeQqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82SeQaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82TFUaEKEeS_pLvh38JH2g" name="" memberEnd="_82TFUqEKEeS_pLvh38JH2g _81BS8KEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82TFUqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82TFUaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82UTcKEKEeS_pLvh38JH2g" name="" memberEnd="_82UTcaEKEeS_pLvh38JH2g _81B6AaEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82UTcaEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82UTcKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82U6gaEKEeS_pLvh38JH2g" name="" memberEnd="_82U6gqEKEeS_pLvh38JH2g _81ChEaEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82U6gqEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82U6gaEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82WIoKEKEeS_pLvh38JH2g" name="" memberEnd="_82WIoaEKEeS_pLvh38JH2g _81DIIqEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82WIoaEKEeS_pLvh38JH2g" name="" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82WIoKEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8m7MkKEKEeS_pLvh38JH2g" name="controller">
+        <packagedElement xmi:type="uml:Class" xmi:id="_8q_NMKEKEeS_pLvh38JH2g" name="Controller">
+          <ownedComment xmi:id="_81wSwKEKEeS_pLvh38JH2g">
+            <body>Controller of the system, for initiate the model and view
+of the system using adaptors.
+@author jz52@rice.edu</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_80u_EKEKEeS_pLvh38JH2g" name="model" visibility="private" type="_8sr2UKEKEeS_pLvh38JH2g" association="_82Eb0KEKEeS_pLvh38JH2g"/>
+          <ownedAttribute xmi:id="_80xbUKEKEeS_pLvh38JH2g" name="view" visibility="private" type="_8tnDYKEKEeS_pLvh38JH2g" association="_82Fp8aEKEeS_pLvh38JH2g"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81QjgKEKEeS_pLvh38JH2g" name="Controller" specification="_8rPr4KEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81RKkKEKEeS_pLvh38JH2g" type="_8q_NMKEKEeS_pLvh38JH2g" direction="return"/>
+            <language>java</language>
+            <body>this.model = new Model(new IModel2ViewAdaptor() {
+
+			@Override
+			public void update(String game) {
+				view.updateDispaly(game);
+			}
+			
+		});
+		
+		this.view = new MainView(new IView2ModelAdaptor() {
+
+			@Override
+			public void startGame() {
+				model.startGame();
+			}
+
+			@Override
+			public void exitGame() {
+				model.exitGame();
+			}
+
+			@Override
+			public void pauseGame() {
+				model.pauseGame();
+			}
+
+			@Override
+			public void resumeGame() {
+				model.resumeGame();
+			}
+
+			@Override
+			public void restartGame() {
+				model.restartGame();
+			}
+
+			@Override
+			public void winGame() {
+				model.winGame();
+			}
+			
+		});
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81U08KEKEeS_pLvh38JH2g" name="start" specification="_8rT9UKEKEeS_pLvh38JH2g">
+            <language>java</language>
+            <body>view.start();
+		model.start();
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_81VcAKEKEeS_pLvh38JH2g" name="main" specification="_8rVLcKEKEeS_pLvh38JH2g">
+            <ownedParameter xmi:id="_81VcAaEKEeS_pLvh38JH2g" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_81VcAqEKEeS_pLvh38JH2g" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>Controller gamecController = new Controller();
+		gamecController.start();
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_8rPr4KEKEeS_pLvh38JH2g" name="Controller" method="_81QjgKEKEeS_pLvh38JH2g">
+            <eAnnotations xmi:id="_8rSIIKEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_8rSvMKEKEeS_pLvh38JH2g" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_8rSvMaEKEeS_pLvh38JH2g" type="_8q_NMKEKEeS_pLvh38JH2g" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rT9UKEKEeS_pLvh38JH2g" name="start" method="_81U08KEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81wSwaEKEeS_pLvh38JH2g">
+              <body>start the controller.</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_8rVLcKEKEeS_pLvh38JH2g" name="main" isStatic="true" method="_81VcAKEKEeS_pLvh38JH2g">
+            <ownedComment xmi:id="_81wSwqEKEeS_pLvh38JH2g">
+              <body>enterance of the program. Initiate a new controller and start it.
+	 * @param args</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_8rVLcaEKEeS_pLvh38JH2g" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8rVygKEKEeS_pLvh38JH2g" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82Eb0KEKEeS_pLvh38JH2g" name="" memberEnd="_82Eb0aEKEeS_pLvh38JH2g _80u_EKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82Eb0aEKEeS_pLvh38JH2g" name="" type="_8q_NMKEKEeS_pLvh38JH2g" association="_82Eb0KEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_82Fp8aEKEeS_pLvh38JH2g" name="" memberEnd="_82Fp8qEKEeS_pLvh38JH2g _80xbUKEKEeS_pLvh38JH2g">
+          <ownedEnd xmi:id="_82Fp8qEKEeS_pLvh38JH2g" name="" type="_8q_NMKEKEeS_pLvh38JH2g" association="_82Fp8aEKEeS_pLvh38JH2g"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8of54KEKEeS_pLvh38JH2g" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8ogg8KEKEeS_pLvh38JH2g" name="awt">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8ojkQKEKEeS_pLvh38JH2g" name="event">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_80WkkKEKEeS_pLvh38JH2g" name="ActionListener"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_80XysaEKEeS_pLvh38JH2g" name="ActionEvent"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_80LlcKEKEeS_pLvh38JH2g" name="BorderLayout"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8ogg8aEKEeS_pLvh38JH2g" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8ohIAKEKEeS_pLvh38JH2g" name="swing">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8ohIAaEKEeS_pLvh38JH2g" name="border">
+          <packagedElement xmi:type="uml:Class" xmi:id="_80P24aEKEeS_pLvh38JH2g" name="EmptyBorder"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_80NaoaEKEeS_pLvh38JH2g" name="JFrame"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_80OowaEKEeS_pLvh38JH2g" name="JPanel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_80RsEKEKEeS_pLvh38JH2g" name="JButton"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_80ThQKEKEeS_pLvh38JH2g" name="JLabel"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_80UvYaEKEeS_pLvh38JH2g" name="SwingConstants"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_790lMKEKEeS_pLvh38JH2g">
+      <eAnnotations xmi:id="_794PkKEKEeS_pLvh38JH2g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_799vIKEKEeS_pLvh38JH2g" base_Package="_7qPh4KEKEeS_pLvh38JH2g">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8rgKkKEKEeS_pLvh38JH2g" base_Element="_8re8cKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8rhYsKEKEeS_pLvh38JH2g" base_Element="_8re8cKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8roGYKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8r2I0aEKEeS_pLvh38JH2g" base_Element="_8r1hwKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8r2v4KEKEeS_pLvh38JH2g" base_Element="_8r1hwKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8r2v4aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8saJgKEKEeS_pLvh38JH2g" base_Element="_8sWfIKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8sdz4aEKEeS_pLvh38JH2g" base_Element="_8sdM0KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8sea8KEKEeS_pLvh38JH2g" base_Element="_8sdM0KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8sea8aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8sx88KEKEeS_pLvh38JH2g" base_Element="_8sxV4KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8s9jIKEKEeS_pLvh38JH2g" base_Element="_8s8VAKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8s-KMKEKEeS_pLvh38JH2g" base_Element="_8s8VAKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8s-KMaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8tPP8KEKEeS_pLvh38JH2g" base_Element="_8tOB0KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8tP3AKEKEeS_pLvh38JH2g" base_Element="_8tOB0KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8tP3AaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8taPEKEKEeS_pLvh38JH2g" base_Element="_8tZA8KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8ta2IKEKEeS_pLvh38JH2g" base_Element="_8tZA8KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8ta2IaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zC9AKEKEeS_pLvh38JH2g" base_Element="_8zBu4KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zC9AaEKEeS_pLvh38JH2g" base_Element="_8zBu4KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zDkEKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zELIKEKEeS_pLvh38JH2g" base_Element="_8zDkEaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zEyMKEKEeS_pLvh38JH2g" base_Element="_8zDkEaEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zEyMaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zGAUKEKEeS_pLvh38JH2g" base_Element="_8zFZQKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zGnYKEKEeS_pLvh38JH2g" base_Element="_8zFZQKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zGnYaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zHOcKEKEeS_pLvh38JH2g" base_Element="_8zGnYqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zH1gKEKEeS_pLvh38JH2g" base_Element="_8zGnYqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zH1gaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zJDoKEKEeS_pLvh38JH2g" base_Element="_8zIckKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zJqsKEKEeS_pLvh38JH2g" base_Element="_8zIckKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zJqsaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zLf4KEKEeS_pLvh38JH2g" base_Element="_8zKRwKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zMG8KEKEeS_pLvh38JH2g" base_Element="_8zKRwKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zMG8aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zNVEKEKEeS_pLvh38JH2g" base_Element="_8zMG8qEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zN8IKEKEeS_pLvh38JH2g" base_Element="_8zMG8qEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zN8IaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zUp0KEKEeS_pLvh38JH2g" base_Element="_8zTbsKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zVQ4KEKEeS_pLvh38JH2g" base_Element="_8zTbsKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zVQ4aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zWfAKEKEeS_pLvh38JH2g" base_Element="_8zVQ4qEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zXGEKEKEeS_pLvh38JH2g" base_Element="_8zVQ4qEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zXGEaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zYUMKEKEeS_pLvh38JH2g" base_Element="_8zXGEqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zYUMaEKEeS_pLvh38JH2g" base_Element="_8zXGEqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zY7QKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zZiUKEKEeS_pLvh38JH2g" base_Element="_8zY7QaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zaJYKEKEeS_pLvh38JH2g" base_Element="_8zY7QaEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zaJYaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zbXgKEKEeS_pLvh38JH2g" base_Element="_8zawcKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zbXgaEKEeS_pLvh38JH2g" base_Element="_8zawcKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zbXgqEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zea0KEKEeS_pLvh38JH2g" base_Element="_8zb-kKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zfB4KEKEeS_pLvh38JH2g" base_Element="_8zb-kKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zfB4aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zg3EKEKEeS_pLvh38JH2g" base_Element="_8zfB4qEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zg3EaEKEeS_pLvh38JH2g" base_Element="_8zfB4qEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zheIKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zoL0KEKEeS_pLvh38JH2g" base_Element="_8znkwKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zoy4KEKEeS_pLvh38JH2g" base_Element="_8znkwKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zoy4aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zqBAKEKEeS_pLvh38JH2g" base_Element="_8zpZ8KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zqoEKEKEeS_pLvh38JH2g" base_Element="_8zpZ8KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zqoEaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zrPIKEKEeS_pLvh38JH2g" base_Element="_8zqoEqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zr2MKEKEeS_pLvh38JH2g" base_Element="_8zqoEqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zr2MaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zsdQaEKEeS_pLvh38JH2g" base_Element="_8zr2MqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8ztEUKEKEeS_pLvh38JH2g" base_Element="_8zr2MqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8ztEUaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8ztrYaEKEeS_pLvh38JH2g" base_Element="_8ztEUqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zuScKEKEeS_pLvh38JH2g" base_Element="_8ztEUqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zu5gKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zvgkKEKEeS_pLvh38JH2g" base_Element="_8zu5gaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zwHoKEKEeS_pLvh38JH2g" base_Element="_8zu5gaEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zwHoaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8zwusKEKEeS_pLvh38JH2g" base_Element="_8zwHoqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8zxVwKEKEeS_pLvh38JH2g" base_Element="_8zwHoqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8zxVwaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z0ZEKEKEeS_pLvh38JH2g" base_Element="_8zzK8KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z1AIKEKEeS_pLvh38JH2g" base_Element="_8zzK8KEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z1AIaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z2OQKEKEeS_pLvh38JH2g" base_Element="_8z1nMKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z21UKEKEeS_pLvh38JH2g" base_Element="_8z1nMKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z21UaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z4DcKEKEeS_pLvh38JH2g" base_Element="_8z3cYKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z4qgKEKEeS_pLvh38JH2g" base_Element="_8z3cYKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z4qgaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z5RkKEKEeS_pLvh38JH2g" base_Element="_8z4qgqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z54oKEKEeS_pLvh38JH2g" base_Element="_8z4qgqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z54oaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z7t0KEKEeS_pLvh38JH2g" base_Element="_8z6fsKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z7t0aEKEeS_pLvh38JH2g" base_Element="_8z6fsKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z8U4KEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z878KEKEeS_pLvh38JH2g" base_Element="_8z8U4aEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z9jAKEKEeS_pLvh38JH2g" base_Element="_8z8U4aEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z9jAaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_8z-xIKEKEeS_pLvh38JH2g" base_Element="_8z9jAqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_8z-xIaEKEeS_pLvh38JH2g" base_Element="_8z9jAqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_8z-xIqEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80AmUKEKEeS_pLvh38JH2g" base_Element="_8z__QKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80BNYKEKEeS_pLvh38JH2g" base_Element="_8z__QKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80BNYaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80CbgKEKEeS_pLvh38JH2g" base_Element="_80B0cKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80CbgaEKEeS_pLvh38JH2g" base_Element="_80B0cKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80CbgqEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80DpoKEKEeS_pLvh38JH2g" base_Element="_80DCkKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80DpoaEKEeS_pLvh38JH2g" base_Element="_80DCkKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80EQsKEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80Fe0KEKEeS_pLvh38JH2g" base_Element="_80EQsaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80GF4KEKEeS_pLvh38JH2g" base_Element="_80EQsaEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80GF4aEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80Gs8KEKEeS_pLvh38JH2g" base_Element="_80GF4qEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80H7EKEKEeS_pLvh38JH2g" base_Element="_80GF4qEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80H7EaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80IiIKEKEeS_pLvh38JH2g" base_Element="_80H7EqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80JJMKEKEeS_pLvh38JH2g" base_Element="_80H7EqEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80JJMaEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80KXUKEKEeS_pLvh38JH2g" base_Element="_80JwQKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Annotations xmi:id="_80KXUaEKEeS_pLvh38JH2g" base_Element="_80JwQKEKEeS_pLvh38JH2g">
+    <annotations xmi:id="_80KXUqEKEeS_pLvh38JH2g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_80NaoKEKEeS_pLvh38JH2g" base_Element="_80LlcKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80OowKEKEeS_pLvh38JH2g" base_Element="_80NaoaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80P24KEKEeS_pLvh38JH2g" base_Element="_80OowaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80RFAKEKEeS_pLvh38JH2g" base_Element="_80P24aEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80S6MKEKEeS_pLvh38JH2g" base_Element="_80RsEKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80UvYKEKEeS_pLvh38JH2g" base_Element="_80ThQKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80V9gKEKEeS_pLvh38JH2g" base_Element="_80UvYaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80XysKEKEeS_pLvh38JH2g" base_Element="_80WkkKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_80ZA0KEKEeS_pLvh38JH2g" base_Element="_80XysaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80w0QKEKEeS_pLvh38JH2g" base_Element="_80u_EKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80xbUaEKEeS_pLvh38JH2g" base_Element="_80xbUKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80ypcaEKEeS_pLvh38JH2g" base_Element="_80ypcKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_801FsKEKEeS_pLvh38JH2g" base_Element="_80z3kKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80264KEKEeS_pLvh38JH2g" base_Element="_802T0KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_803h8aEKEeS_pLvh38JH2g" base_Element="_80264aEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_805XIKEKEeS_pLvh38JH2g" base_Element="_804wEKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_808acKEKEeS_pLvh38JH2g" base_Element="_807zYaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_809BgaEKEeS_pLvh38JH2g" base_Element="_809BgKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80-PoKEKEeS_pLvh38JH2g" base_Element="_809okKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80-2sKEKEeS_pLvh38JH2g" base_Element="_80-PoaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_80_dwKEKEeS_pLvh38JH2g" base_Element="_80-2saEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81AE0aEKEeS_pLvh38JH2g" base_Element="_80_dwaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81Ar4qEKEeS_pLvh38JH2g" base_Element="_81Ar4KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81B6AKEKEeS_pLvh38JH2g" base_Element="_81BS8KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81ChEKEKEeS_pLvh38JH2g" base_Element="_81B6AaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81DIIaEKEeS_pLvh38JH2g" base_Element="_81ChEaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_81DvMaEKEeS_pLvh38JH2g" base_Element="_81DIIqEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82Fp8KEKEeS_pLvh38JH2g" base_Element="_82Eb0KEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82GRAKEKEeS_pLvh38JH2g" base_Element="_82Fp8aEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82HfIKEKEeS_pLvh38JH2g" base_Element="_82G4EKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82ItQKEKEeS_pLvh38JH2g" base_Element="_82IGMKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82JUUKEKEeS_pLvh38JH2g" base_Element="_82ItQaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82LwkKEKEeS_pLvh38JH2g" base_Element="_82J7YKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82M-sKEKEeS_pLvh38JH2g" base_Element="_82LwkaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82NlwKEKEeS_pLvh38JH2g" base_Element="_82M-saEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82Oz4KEKEeS_pLvh38JH2g" base_Element="_82NlwaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82QCAKEKEeS_pLvh38JH2g" base_Element="_82Oz4aEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82QpEKEKEeS_pLvh38JH2g" base_Element="_82QCAaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82RQIKEKEeS_pLvh38JH2g" base_Element="_82QpEaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82SeQKEKEeS_pLvh38JH2g" base_Element="_82R3MKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82TFUKEKEeS_pLvh38JH2g" base_Element="_82SeQaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82TsYKEKEeS_pLvh38JH2g" base_Element="_82TFUaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82U6gKEKEeS_pLvh38JH2g" base_Element="_82UTcKEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82VhkKEKEeS_pLvh38JH2g" base_Element="_82U6gaEKEeS_pLvh38JH2g"/>
+  <UMLLabProfile:Reference xmi:id="_82WvsKEKEeS_pLvh38JH2g" base_Element="_82WIoKEKEeS_pLvh38JH2g"/>
+</xmi:XMI>

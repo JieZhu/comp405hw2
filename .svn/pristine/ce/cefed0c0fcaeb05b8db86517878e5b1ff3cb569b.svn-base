@@ -1,0 +1,9 @@
+package jz52.model.algo;
+
+import jz52.model.Game;
+
+public interface IVisitor {
+	
+	public Object caseAt(Class<?> id, Game game, Object... ps);
+
+}

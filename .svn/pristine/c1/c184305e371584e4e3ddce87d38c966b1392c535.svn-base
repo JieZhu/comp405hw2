@@ -1,0 +1,44 @@
+package jz52.model;
+
+import jz52.model.Game;
+
+public class MainMenuState implements IGameState {
+	
+	public static MainMenuState Singleton = new MainMenuState();
+
+	public MainMenuState() {
+
+	}
+
+	@Override
+	public void start(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void restart(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+	
+
+}

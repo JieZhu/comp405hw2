@@ -1,0 +1,131 @@
+package jz52.view;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+/**
+ * main view in the MVC model in the system.
+ * @author jz52@rice.edu
+ *
+ */
+public class MainView extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8168764013326581332L;
+	
+	/**
+	 * view-2-model adaptor in main view
+	 */
+	private IView2ModelAdaptor _model;
+	
+	private JPanel contentPane;
+	private final JPanel panel = new JPanel();
+	private final JButton btnStart = new JButton("Start");
+	private final JButton btnExit = new JButton("Exit");
+	private final JButton btnPause = new JButton("Pause");
+	private final JLabel lblGreeting = new JLabel("Main Menu State");
+	private final JButton btnResume = new JButton("Resume");
+	private final JButton btnRestart = new JButton("Restart");
+
+
+	/**
+	 * Create the frame.
+	 */
+	public MainView(IView2ModelAdaptor model) {
+		this._model = model;
+		initGUI();
+	}
+	
+	/**
+	 * start main view
+	 */
+	public void start(){
+		setVisible(true);
+	}
+	
+	/**
+	 * init GUI
+	 */
+	private void initGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 525, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
+		
+		contentPane.add(panel, BorderLayout.SOUTH);
+		btnStart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnStart.setEnabled(false);
+				btnPause.setEnabled(true);
+				btnRestart.setEnabled(true);
+				_model.startGame();
+			}
+		});
+		
+		panel.add(btnStart);
+		btnPause.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnPause.setEnabled(false);
+				btnResume.setEnabled(true);
+				_model.pauseGame();
+			}
+		});
+		btnPause.setEnabled(false);
+		
+		panel.add(btnPause);
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnPause.setEnabled(false);
+				btnExit.setEnabled(false);
+				_model.exitGame();
+			}
+		});
+		btnResume.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnResume.setEnabled(false);
+				btnPause.setEnabled(true);
+				_model.resumeGame();
+			}
+		});
+		btnResume.setEnabled(false);
+		
+		panel.add(btnResume);
+		
+		panel.add(btnExit);
+		btnRestart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnExit.setEnabled(true);
+				btnPause.setEnabled(true);
+				_model.restartGame();
+			}
+		});
+		btnRestart.setEnabled(false);
+		
+		panel.add(btnRestart);
+		lblGreeting.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		contentPane.add(lblGreeting, BorderLayout.CENTER);
+	}
+
+	/**
+	 * update the game state label to display
+	 * @param game ---text to show the game state
+	 */
+	public void updateDispaly(String game) {
+		lblGreeting.setText(game);
+	}
+
+}

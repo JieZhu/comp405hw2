@@ -1,0 +1,92 @@
+package jz52.model;
+
+/**
+ * simulated-game class. The game can be started, exit, 
+ * paused, resumed and restarted.
+ * @author jz52@rice.edu
+ */
+public class Game {
+	
+	/**
+	 * game state.
+	 */
+	private IGameState _state;
+
+	/**
+	 * Constructor: instantiate the game state with the Main menu state.
+	 */
+	public Game() {
+		super();
+		this._state = MainMenuState.Singleton;
+	}
+	
+	/**
+	 * start the game
+	 */
+	public void start() {
+		_state.start(this);
+	}
+	
+	/**
+	 * exit the game
+	 */
+	public void exit() {
+		_state.exit(this);
+	}
+
+	/**
+	 * pause the game	
+	 */
+	public void pause() {
+		_state.pause(this);
+	}
+	
+	/**
+	 * resume the game
+	 */
+	public void resume() {
+		_state.resume(this);
+	}
+	
+	/**
+	 * restart the game
+	 */
+	public void restart() {
+		_state.restart(this);
+	}
+	
+	/**
+	 * win the game
+	 */
+	public void win() {
+		_state.win(this);
+	}
+	
+	@Override
+	public String toString() {
+		return _state.toString();
+	}
+	
+	
+	/*
+	 * protected methods for changing and getting the state.
+	 */
+	
+	/**
+	 * get the current game state
+	 * @return the game state
+	 */
+	IGameState getState() {
+		return _state;
+	}
+
+	/**
+	 * set the state of the game
+	 * @param _state --- new state to be set
+	 */
+	void setState(IGameState _state) {
+		this._state = _state;
+	}
+
+
+}

@@ -1,0 +1,93 @@
+package jz52.model;
+
+/**
+ * the model class of the system. Model can start game, exit
+ * game, pause game, resume game and restart game, in addition to
+ * let the view to update the display text.
+ * @author jz52@rice.edu
+ */
+public class Model {
+	
+	/**
+	 * model to view adaptor.
+	 */
+	private IModel2ViewAdaptor _view;
+	
+	/**
+	 * game instance. initiate a game object.
+	 */
+	private Game game = new Game();
+
+	/**
+	 * constructor of Model. take a model-to-view adaptor as 
+	 * an input parameter.
+	 * @param _view	--- model-to-view adaptor.
+	 */
+	public Model(IModel2ViewAdaptor _view) {
+		this._view = _view;
+	}
+
+	/**
+	 * start the model.
+	 */
+	public void start() {
+		
+	}
+
+	/**
+	 * start the game.
+	 */
+	public void startGame() {
+		game.start();
+		updateState();
+	}
+
+	/**
+	 * exit the game
+	 */
+	public void exitGame() {
+		game.exit();
+		updateState();
+	}
+
+	/**
+	 * pause the game when playing
+	 */
+	public void pauseGame() {
+		game.pause();
+		updateState();
+	}
+
+	/**
+	 * resume the game from pause game menu
+	 */
+	public void resumeGame() {
+		game.resume();
+		updateState();
+	}
+
+	/**
+	 * restart the game from game over menu
+	 */
+	public void restartGame() {
+		game.restart();
+		updateState();
+	}
+	
+	/**
+	 * win the game when playing game
+	 */
+	public void winGame() {
+		game.win();
+		updateState();
+	}
+	
+	/**
+	 * uodate the display label in view
+	 */
+	public void updateState(){
+		_view.update(game.toString());
+	}
+
+	
+}

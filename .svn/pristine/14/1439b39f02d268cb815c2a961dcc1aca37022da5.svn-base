@@ -1,0 +1,64 @@
+package jz52.controller;
+
+import jz52.model.IModel2ViewAdaptor;
+import jz52.model.Model;
+import jz52.view.IView2ModelAdaptor;
+import jz52.view.MainView;
+
+public class Controller {
+	
+	private Model model;
+	private MainView view;
+	
+	
+	public Controller(){
+		this.model = new Model(new IModel2ViewAdaptor() {
+
+			@Override
+			public void update(String game) {
+				view.updateDispaly(game);
+			}
+			
+		});
+		
+		this.view = new MainView(new IView2ModelAdaptor() {
+
+			@Override
+			public void startGame() {
+				model.startGame();
+			}
+
+			@Override
+			public void exitGame() {
+				model.exitGame();
+			}
+
+			@Override
+			public void pauseGame() {
+				model.pauseGame();
+			}
+
+			@Override
+			public void resumeGame() {
+				model.resumeGame();
+			}
+
+			@Override
+			public void restartGame() {
+				model.restartGame();
+			}
+			
+		});
+	}
+	
+	public void start(){
+		view.start();
+		model.start();
+	}
+	
+	public static void main(String[] args) {
+		Controller gamecController = new Controller();
+		gamecController.start();
+	}
+
+}

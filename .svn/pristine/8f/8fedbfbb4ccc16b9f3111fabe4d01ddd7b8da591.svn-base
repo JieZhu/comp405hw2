@@ -1,0 +1,35 @@
+package jz52.model;
+
+public class GameOverMenuState implements IGameState {
+
+	@Override
+	public void start(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void exit(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void restart(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+}

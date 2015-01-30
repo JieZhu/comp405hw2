@@ -1,0 +1,18 @@
+package jz52.model.algo;
+
+import jz52.model.Game;
+import jz52.model.PlayState;
+
+public class RestartVisitor extends AVisitor {
+
+	public RestartVisitor() {
+		super(new IVisitorCommand() {
+			
+			@Override
+			public Object apply(Class<?> id, Game game, Object[] ps) {
+				return game.setState(new PlayState());
+			}
+		});
+	}
+	
+}

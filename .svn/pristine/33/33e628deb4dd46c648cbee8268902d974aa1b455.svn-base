@@ -1,0 +1,61 @@
+package jz52.model;
+
+import jz52.model.Game;
+
+/**
+ * Main menu state is the state when first entering the game.
+ * throw UnsupportedOperationException when the operation is not supported.
+ * @author jz52@rice.edu	
+ *
+ */
+public class MainMenuState implements IGameState {
+	
+	/**
+	 * singleton
+	 */
+	public static MainMenuState Singleton = new MainMenuState();
+
+	public MainMenuState() {
+
+	}
+
+	@Override
+	public void start(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void restart(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String toString() {
+		return "Main Menu State";
+	}
+	
+	@Override
+	public void win(Game game) {
+		throw new UnsupportedOperationException();
+	}
+}

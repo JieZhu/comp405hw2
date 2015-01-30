@@ -1,0 +1,46 @@
+package jz52.model;
+
+public class Model {
+	
+	private IModel2ViewAdaptor _view;
+	
+	private Game game = new Game();
+
+	public Model(IModel2ViewAdaptor _view) {
+		this._view = _view;
+	}
+
+	public void start() {
+		
+	}
+
+	public void startGame() {
+		game.start();
+		updateState();
+	}
+
+	public void exitGame() {
+		game.exit();
+		updateState();
+	}
+
+	public void pauseGame() {
+		game.pause();
+		updateState();
+	}
+
+	public void resumeGame() {
+		game.resume();
+		updateState();
+	}
+
+	public void restartGame() {
+		game.restart();
+		updateState();
+	}
+	
+	public void updateState(){
+		_view.update(game.toString());
+	}
+	
+}

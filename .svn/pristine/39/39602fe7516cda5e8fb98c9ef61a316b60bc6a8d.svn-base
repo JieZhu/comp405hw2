@@ -1,0 +1,51 @@
+package jz52.model;
+
+/**
+ * victory State.
+ * throw UnsupportedOperationException when the operation is not supported.
+ * @author jz52@rice.edu
+ *
+ */
+public class VictoryState implements IGameState {
+
+	@Override
+	public void start(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void restart(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void win(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public String toString() {
+		return "Victory State";
+	}
+	
+}

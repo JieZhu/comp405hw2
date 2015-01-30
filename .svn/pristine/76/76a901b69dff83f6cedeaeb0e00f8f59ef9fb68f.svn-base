@@ -1,0 +1,19 @@
+package jz52.model;
+
+import jz52.model.Game;
+
+public interface IGameState {
+
+	void start(Game game);
+
+	void exit(Game game);
+
+	void pause(Game game);
+
+	void resume(Game game);
+
+	void restart(Game game);
+	
+	void fail(Game game);
+
+}

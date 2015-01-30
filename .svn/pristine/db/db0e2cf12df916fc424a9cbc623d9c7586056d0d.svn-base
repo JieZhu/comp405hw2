@@ -1,0 +1,19 @@
+package jz52.model.algo;
+
+import jz52.model.Game;
+import jz52.model.GameOverMenuState;
+
+public class ExitGameVisitor extends AVisitor {
+
+	public ExitGameVisitor() {
+		super(new IVisitorCommand() {
+			
+			@Override
+			public Object apply(Class<?> id, Game game, Object[] ps) {
+				return game.setState(new GameOverMenuState());
+			}
+		});
+	}
+
+	
+}

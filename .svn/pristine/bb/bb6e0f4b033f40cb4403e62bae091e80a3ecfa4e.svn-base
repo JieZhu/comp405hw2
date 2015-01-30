@@ -1,0 +1,87 @@
+package jz52.controller;
+
+import jz52.model.IModel2ViewAdaptor;
+import jz52.model.Model;
+import jz52.view.IView2ModelAdaptor;
+import jz52.view.MainView;
+
+/**
+ * Controller of the system, for initiate the model and view
+ * of the system using adaptors.
+ * @author jz52@rice.edu
+ */
+public class Controller {
+	
+	/**
+	 * model of the system
+	 */
+	private Model model;
+	/**
+	 * main view of the system
+	 */
+	private MainView view;
+	
+	
+	public Controller(){
+		this.model = new Model(new IModel2ViewAdaptor() {
+
+			@Override
+			public void update(String game) {
+				view.updateDispaly(game);
+			}
+			
+		});
+		
+		this.view = new MainView(new IView2ModelAdaptor() {
+
+			@Override
+			public void startGame() {
+				model.startGame();
+			}
+
+			@Override
+			public void exitGame() {
+				model.exitGame();
+			}
+
+			@Override
+			public void pauseGame() {
+				model.pauseGame();
+			}
+
+			@Override
+			public void resumeGame() {
+				model.resumeGame();
+			}
+
+			@Override
+			public void restartGame() {
+				model.restartGame();
+			}
+
+			@Override
+			public void winGame() {
+				model.winGame();
+			}
+			
+		});
+	}
+	
+	/**
+	 * start the controller.
+	 */
+	public void start(){
+		view.start();
+		model.start();
+	}
+	
+	/**
+	 * enterance of the program. Initiate a new controller and start it.
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Controller gamecController = new Controller();
+		gamecController.start();
+	}
+
+}

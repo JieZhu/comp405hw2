@@ -1,0 +1,41 @@
+package jz52.model;
+
+public class PauseMenuState implements IGameState {
+	
+	private IGameState _pre;
+	
+	public PauseMenuState(IGameState _pre) {
+		this._pre = _pre;
+	}
+
+	@Override
+	public void start(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void exit(Game game) {
+		game.setState(new GameOverMenuState());
+	}
+
+	@Override
+	public void pause(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void resume(Game game) {
+		game.setState(_pre);
+	}
+
+	@Override
+	public void restart(Game game) {
+		game.setState(new PlayState());
+	}
+
+	@Override
+	public void fail(Game game) {
+		throw new UnsupportedOperationException();
+	}
+
+}
